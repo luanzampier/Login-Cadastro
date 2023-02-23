@@ -1,0 +1,71 @@
+<div class="container flex align-items-center justify-content-center flex-column"
+>
+  <div class="card flex flex-column align-items-center pt-4">
+
+    <div class="flex justify-content-center mb-5 w-full">
+      <img class="w-10rem" src="../../../assets/imagens/transferir.png"/>
+    </div>
+
+    <span class="p-float-label mb-5">
+      <input
+        id="float-input"
+        type="text"
+        class="w-17rem border-none border-bottom-3"
+        pInputText
+      />
+      <label for="float-input">Nome de Usuario</label>
+    </span>
+
+    <span class="p-float-label w-17rem">
+      <p-password 
+      inputId="password" 
+      [feedback]="false" 
+      [toggleMask]="true" 
+      inputStyleClass=" w-17rem border-none border-bottom-3 "
+      >
+      </p-password>
+      <label for="password">Password</label>
+    </span>
+
+    <div class="botao-padrao w-full mb-0 mt-7">
+      <button
+        pButton
+        type="button"
+        label="login"
+        class="p-button-raised w-full border-noround-top border-round-bottom-3x1"
+      ></button>
+    </div>
+
+  </div>
+
+  <div class="mt-1">
+    <p class="text-50">
+      Novo por aqui?
+      <a class="text-orange-500 no-underline hover:underline cursor-pointer"  (click)="Cadastrar()"
+        >Cadastre-se</a
+      >
+    </p>
+  </div>
+
+  <p-dialog [transitionOptions]="'0.08s'" position="center" [(visible)]="modalCadastro" >
+      <div class="container-modal-cadastro">
+        <input type="text" pInputText placeholder="Nome Completo" class="w-full"/>
+        <div class="flex flex-row w-full justify-content-between">
+          <p-inputMask  mask="dd/mm/aaaa" placeholder="Data de Nascimento" styleClass="w-21rem" ></p-inputMask>
+          <p-inputMask  mask="000.000.000-00" placeholder="CPF" styleClass="w-21rem" ></p-inputMask>
+        </div>
+        <div class="flex flex-row w-full justify-content-between">
+          <input type="text" pInputText placeholder="Nome Usuario" class="w-21rem" />
+          <p-password 
+            inputId="password1" 
+            [feedback]="false" 
+            [toggleMask]="true" 
+            inputStyleClass=" w-21rem "
+            placeholder="Sua Senha"
+            >
+       </p-password>
+        </div>
+      </div> 
+  </p-dialog>
+
+</div>

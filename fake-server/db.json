@@ -1,0 +1,20 @@
+{
+  "clientes": [
+    {
+      "id": "luanzampier",
+      "password": "zampr031",
+      "nome": "luan zampier rezende",
+      "data_nascimento": "10/01/1996",
+      "sexo": "masculino",
+      "cpf": "09133588600"
+    },
+    {
+      "id": "adriana",
+      "password": "0pessoas",
+      "nome": "adriana zampier",
+      "data_nascimento": "08/08/1960",
+      "sexo": "Feminino",
+      "cpf": "54931533604"
+    }
+  ]
+}
