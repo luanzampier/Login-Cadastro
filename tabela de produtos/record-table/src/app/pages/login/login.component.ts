@@ -15,6 +15,7 @@ export class LoginComponent {
   login: string = 'luanzampier';
   senha: string = 'zampr031';
   modalCadastro:boolean = false;
+  val3!:any
   
 
   ngOnInit(): void {
@@ -31,8 +32,8 @@ export class LoginComponent {
           console.log(
             result.nome,
             result.data_nascimento,
-            result.sexo,
-            result.cpf
+            result.cpf,
+            result.telefone
           );
         }
       },

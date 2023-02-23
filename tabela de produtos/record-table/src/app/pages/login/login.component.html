@@ -47,15 +47,33 @@
     </p>
   </div>
 
-  <p-dialog [transitionOptions]="'0.08s'" position="center" [(visible)]="modalCadastro" >
+  <p-dialog 
+  [transitionOptions]="'0.08s'" 
+  position="center" 
+  [(visible)]="modalCadastro" >
+
       <div class="container-modal-cadastro">
-        <input type="text" pInputText placeholder="Nome Completo" class="w-full"/>
+
+        <input 
+        type="text" 
+        pInputText 
+        placeholder="Nome Completo" 
+        class="w-full"/>
+
         <div class="flex flex-row w-full justify-content-between">
-          <p-inputMask  mask="dd/mm/aaaa" placeholder="Data de Nascimento" styleClass="w-21rem" ></p-inputMask>
-          <p-inputMask  mask="000.000.000-00" placeholder="CPF" styleClass="w-21rem" ></p-inputMask>
+
+          <app-input-mask-cpf></app-input-mask-cpf>
+          
+          <div class="p-col-12 p-md-6 p-lg-4">
+            <p-inputMask mask="99/99/9999"  placeholder="Data de Nascimento" ></p-inputMask>
+          </div>
+
         </div>
+
         <div class="flex flex-row w-full justify-content-between">
+
           <input type="text" pInputText placeholder="Nome Usuario" class="w-21rem" />
+
           <p-password 
             inputId="password1" 
             [feedback]="false" 
@@ -63,8 +81,12 @@
             inputStyleClass=" w-21rem "
             placeholder="Sua Senha"
             >
-       </p-password>
+          </p-password>
+
+         
+          
         </div>
+        
       </div> 
   </p-dialog>
 

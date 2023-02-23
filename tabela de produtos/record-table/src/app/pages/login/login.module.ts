@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 import {DialogModule} from 'primeng/dialog';
 import {PasswordModule} from 'primeng/password';
 import {InputMaskModule} from 'primeng/inputmask';
+import { InputMaskCpfModule } from 'src/app/shared/inputs/input-mask-cpf/input-mask-cpf.module';
+
 
 @NgModule({
   declarations: [LoginComponent],
@@ -21,7 +23,10 @@ import {InputMaskModule} from 'primeng/inputmask';
     FormsModule,
     DialogModule,
     PasswordModule,
-    InputMaskModule
+    InputMaskModule,
+    InputMaskCpfModule,
+    
+    
   ],
 })
 export class LoginModule {}
